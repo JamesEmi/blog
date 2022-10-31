@@ -1,0 +1,19 @@
+---
+title: "About"
+image: images/JamesEmi_Pic.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/JamesEmilian2
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/james-emilian/
+    - icon: github
+      text: Github
+      href: https://github.com/JamesEmi
+
+---
+
+Playing around with code and words; a constant state of figuring 🔮🎶
