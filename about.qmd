@@ -1,8 +1,9 @@
 ---
-title: "About"
+title: "Hi there!"
 image: images/JamesEmi_Pic.jpg
 about:
   template: jolla
+  # jolla
   links:
     - icon: twitter
       text: Twitter

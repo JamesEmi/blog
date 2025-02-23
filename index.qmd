@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "JCodes"
 listing:
   contents: posts
@@ -9,6 +9,32 @@ listing:
   filter-ui: false
 page-layout: full
 title-block-banner: true
+--- -->
+
+---
+title: "Hello :)"
+page-layout: full
+title-block-banner: true
 ---
 
+::: {.grid}
+:::{.g-col-7}
+<!-- # James Emilian -->
+
+I am a researcher and engineer with expertise in **Machine Learning**, **Robotics**, and **AI for Healthcare**. My work spans across academia and industry, with a focus on deploying intelligent systems for real-world impact.
+
+I am currently a core ML team member at the **DARPA Triage Challenge**, developing **multimodal deep learning models** for battlefield trauma detection.
+
+I've worked on diverse research areas, including:
+- **Machine Unlearning** for privacy-preserving AI
+- **Imitation Learning** for long-horizon robotics
+- **AI-powered ultrasound diagnostics** for medical applications
+
+📌 **Check out my [Projects](projects.qmd) and [Research](research.qmd).**  
+✍️ **For my thoughts on AI & research, visit the [Blog](blog.qmd).**
+:::
+:::{.g-col-5}
+![James Emilian](images/JamesEmi_Pic.jpg){width=100%}
+:::
+:::
 

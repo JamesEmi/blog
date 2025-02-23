@@ -3,6 +3,19 @@
     "listing": "/index.html",
     "items": [
       "/posts/trial_2024/index.html",
+      "/posts/ToM_11-851/index.html",
+      "/posts/jetson_orin_ml_lessons/index.html",
+      "/posts/attention_neural/index.html",
+      "/posts/DiffEditMask/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/trial_2024/index.html",
+      "/posts/ToM_11-851/index.html",
+      "/posts/jetson_orin_ml_lessons/index.html",
+      "/posts/attention_neural/index.html",
       "/posts/DiffEditMask/index.html"
     ]
   }

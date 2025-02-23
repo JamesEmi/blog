@@ -3,17 +3,32 @@ project:
   output-dir: docs
 
 website:
-  title: "JCodes"
+  title: "James Emilian"
   navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      # - href: research.qmd
+      #   text: Research
+      - href: blog.qmd
+        text: Blog
+      - href: about.qmd
+        text: About
     right:
-      - about.qmd
       - icon: github
         href: https://github.com/JamesEmi
       - icon: twitter
         href: https://twitter.com/JamesEmilian2
+      - icon: linkedin
+        href: https://www.linkedin.com/in/james-emilian/
 format:
   html:
-    theme: journal
+    theme: 
+      light: flatly
+      dark: darkly
     css: styles.css
+    toc: true
 
 

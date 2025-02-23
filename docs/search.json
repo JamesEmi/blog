@@ -2,7 +2,7 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Hi there!",
     "section": "",
     "text": "Playing around with code and words; in a constant state of figuring 🔮🎶"
   },
@@ -39,13 +39,83 @@
     "href": "posts/trial_2024/index.html",
     "title": "Blood Mask EDA",
     "section": "",
-    "text": "Take a look at the data I have now - how a blood mask png generated on Pixelmator looks:\n\nfrom PIL import Image\nimport numpy as np\n\nmask = Image.open('/notebooks/triage/hemofpn/data_v2/train/masks/02.png')\n\nmask_arr = np.array(mask)\nmask_arr.shape\n\n(723, 758, 4)\n\n\n\nnp.unique(mask_arr)\n\narray([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,\n        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,\n        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,\n        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,\n        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,\n        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,\n        78,  79,  80,  81,  82,  83,  84,  85,  86,  87,  88,  89,  90,\n        91,  92,  93,  94,  95,  96,  97,  98,  99, 100, 101, 102, 103,\n       104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116,\n       117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129,\n       130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142,\n       143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,\n       156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168,\n       169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181,\n       182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194,\n       195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207,\n       208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220,\n       221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233,\n       234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246,\n       247, 248, 249, 250, 251, 252, 253, 254, 255], dtype=uint8)\n\n\nWhat does the image itself look like?\n\nfrom PIL import Image\nimport numpy as np\n\nimage = Image.open('/notebooks/triage/hemofpn/data_v2/train/images/02.png')\n\nimage_arr = np.array(image)\nimage_arr.shape\n\n(723, 758, 4)\n\n\n\ndef pad_im(image, target_shape=(768, 768)):\n        if image.ndim == 3 and (image.shape[2] == 3 or image.shape[2] == 1):  # If image is in HWC format\n            h, w, c = image.shape\n            image = np.transpose(image, (2, 0, 1))  # Convert to CHW for processing\n        elif image.ndim == 3 and (image.shape[0] == 3 or image.shape[0] == 1):  # If image is in CHW format\n            c, h, w = image.shape\n            # image = np.transpose(image, (1, 2, 0))  # Convert to HWC for processing\n        elif image.ndim == 2:\n            h, w = image.shape\n        else:\n            raise ValueError(\"Unexpected image format, image is of shape:\", image.shape)\n        \n        scale = min(target_shape[0] / h, target_shape[1] / w)\n        new_h, new_w = int(h * scale), int(w * scale)\n\n        # Ensure dimensions are divisible by 32\n        new_h = ((new_h + 31) // 32) * 32\n        new_w = ((new_w + 31) // 32) * 32\n\n        resized_image = np.array([cv2.resize(img, (new_w, new_h)) for img in image])\n\n        pad_h = max(target_shape[0] - new_h, 0)\n        pad_w = max(target_shape[1] - new_w, 0)\n        pad_top = pad_h // 2\n        pad_bottom = pad_h - pad_top\n        pad_left = pad_w // 2\n        pad_right = pad_w - pad_left\n\n        padded_im = np.pad(resized_image, ((0, 0), (pad_top, pad_bottom), (pad_left, pad_right)), mode='constant')\n\n        return padded_im\n\n\n!pip install opencv-python\n\nRequirement already satisfied: opencv-python in /usr/local/lib/python3.9/dist-packages (4.6.0.66)\nRequirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.9/dist-packages (from opencv-python) (1.23.4)\nWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv\n\n\n\nimport matplotlib.pyplot as plt\n\n\nimport cv2\n\nimage = cv2.imread('/notebooks/triage/hemofpn/data_v2/train/images/02.png')\n\nimage = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)\nplt.imshow(image)\n\n\n\n\n\n\n\n\n\nimage.shape\n\n(723, 758, 3)\n\n\n\nimage = np.transpose(image, (2, 0, 1))\nimage.shape\n\n(3, 723, 758)\n\n\n\nimage = pad_im(image)\nimage.shape\n\n(3, 768, 768)\n\n\nOk, after padding the image has this shape.\nHow does a blood mask png from F8 look?\n\nmask_f8 = Image.open('/notebooks/triage/hemofpn/data_f8/train/masks/adt2_image_1121.png')\n\nmask_f8 = np.array(mask_f8)\nmask_f8.shape\n\n(1440, 1920, 4)\n\n\n\nnp.unique(mask_f8)\n\narray([  0, 255], dtype=uint8)\n\n\n\nimport cv2\n\nimage = cv2.imread('/notebooks/triage/hemofpn/data_f8/train/masks/adt2_image_1121.png')\n\nimage = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)\nplt.imshow(image)\n\n\n\n\n\n\n\n\n\nimage.shape\n\n(1440, 1920, 3)\n\n\nLooks ok - the only difference is that with F8 masks the constituent values are only 0 and 255."
+    "text": "Take a look at the data I have now - how a blood mask png generated on Pixelmator looks:\n\nfrom PIL import Image\nimport numpy as np\n\nmask = Image.open('/notebooks/triage/hemofpn/data_v2/train/masks/02.png')\n\nmask_arr = np.array(mask)\nmask_arr.shape\n\n(723, 758, 4)\n\n\n\nnp.unique(mask_arr)\n\narray([  0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,\n        13,  14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,\n        26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,\n        39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,\n        52,  53,  54,  55,  56,  57,  58,  59,  60,  61,  62,  63,  64,\n        65,  66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,  77,\n        78,  79,  80,  81,  82,  83,  84,  85,  86,  87,  88,  89,  90,\n        91,  92,  93,  94,  95,  96,  97,  98,  99, 100, 101, 102, 103,\n       104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116,\n       117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129,\n       130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142,\n       143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,\n       156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168,\n       169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181,\n       182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194,\n       195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207,\n       208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220,\n       221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233,\n       234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246,\n       247, 248, 249, 250, 251, 252, 253, 254, 255], dtype=uint8)\n\n\nWhat does the image itself look like?\n\nfrom PIL import Image\nimport numpy as np\n\nimage = Image.open('/notebooks/triage/hemofpn/data_v2/train/images/02.png')\n\nimage_arr = np.array(image)\nimage_arr.shape\n\n(723, 758, 4)\n\n\n\ndef pad_im(image, target_shape=(768, 768)):\n        if image.ndim == 3 and (image.shape[2] == 3 or image.shape[2] == 1):  # If image is in HWC format\n            h, w, c = image.shape\n            image = np.transpose(image, (2, 0, 1))  # Convert to CHW for processing\n        elif image.ndim == 3 and (image.shape[0] == 3 or image.shape[0] == 1):  # If image is in CHW format\n            c, h, w = image.shape\n            # image = np.transpose(image, (1, 2, 0))  # Convert to HWC for processing\n        elif image.ndim == 2:\n            h, w = image.shape\n        else:\n            raise ValueError(\"Unexpected image format, image is of shape:\", image.shape)\n        \n        scale = min(target_shape[0] / h, target_shape[1] / w)\n        new_h, new_w = int(h * scale), int(w * scale)\n\n        # Ensure dimensions are divisible by 32\n        new_h = ((new_h + 31) // 32) * 32\n        new_w = ((new_w + 31) // 32) * 32\n\n        resized_image = np.array([cv2.resize(img, (new_w, new_h)) for img in image])\n\n        pad_h = max(target_shape[0] - new_h, 0)\n        pad_w = max(target_shape[1] - new_w, 0)\n        pad_top = pad_h // 2\n        pad_bottom = pad_h - pad_top\n        pad_left = pad_w // 2\n        pad_right = pad_w - pad_left\n\n        padded_im = np.pad(resized_image, ((0, 0), (pad_top, pad_bottom), (pad_left, pad_right)), mode='constant')\n\n        return padded_im\n\n\n!pip install opencv-python\n\nRequirement already satisfied: opencv-python in /usr/local/lib/python3.9/dist-packages (4.6.0.66)\nRequirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.9/dist-packages (from opencv-python) (1.23.4)\nWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv\n\n\n\nimport matplotlib.pyplot as plt\n\n\nimage.shape\n\n(723, 758, 3)\n\n\n\nimage = np.transpose(image, (2, 0, 1))\nimage.shape\n\n(3, 723, 758)\n\n\n\nimage = pad_im(image)\nimage.shape\n\n(3, 768, 768)\n\n\nOk, after padding the image has this shape.\nHow does a blood mask png from F8 look?\n\nmask_f8 = Image.open('/notebooks/triage/hemofpn/data_f8/train/masks/adt2_image_1121.png')\n\nmask_f8 = np.array(mask_f8)\nmask_f8.shape\n\n(1440, 1920, 4)\n\n\n\nnp.unique(mask_f8)\n\narray([  0, 255], dtype=uint8)\n\n\n\nimport cv2\n\nimage = cv2.imread('/notebooks/triage/hemofpn/data_f8/train/masks/adt2_image_1121.png')\n\nimage = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)\nplt.imshow(image)\n\n\n\n\n\n\n\n\n\nimage.shape\n\n(1440, 1920, 3)\n\n\nLooks ok - the only difference is that with F8 masks the constituent values are only 0 and 255."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "JCodes",
+    "title": "Hello :)",
     "section": "",
-    "text": "Blood Mask EDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText prompt-based Image Masking using Stable Diffusion: A series of experiments\n\n\n\n\n\n\nCode\n\n\nAI\n\n\nStableDiffusion\n\n\nfast.ai\n\n\n\n\n\n\n\n\n\nOct 31, 2022\n\n\nJames Emilian\n\n\n\n\n\n\nNo matching items"
+    "text": "I am a researcher and engineer with expertise in Machine Learning, Robotics, and AI for Healthcare. My work spans across academia and industry, with a focus on deploying intelligent systems for real-world impact.\nI am currently a core ML team member at the DARPA Triage Challenge, developing multimodal deep learning models for battlefield trauma detection.\nI’ve worked on diverse research areas, including: - Machine Unlearning for privacy-preserving AI - Imitation Learning for long-horizon robotics - AI-powered ultrasound diagnostics for medical applications\n📌 Check out my Projects and Research.\n✍️ For my thoughts on AI & research, visit the Blog.\n\n\n\n\n\nJames Emilian"
+  },
+  {
+    "objectID": "posts/attention_neural/index.html",
+    "href": "posts/attention_neural/index.html",
+    "title": "Attention - contrasting the neural perspective with the mathematical",
+    "section": "",
+    "text": "The attention mechanism in the brain directly analogous to the attention mechanism in models. Can I draw parallels??\n(really leaning into this angle is a fun play to make/)\nReference links:\nThe concept of change blindness: \nCould not see the wind shield color change; and once it was mentioned - yes it was. Then - after it was pointed out - we could notice it even with the peripheral vision. Can I run a model on this image and illustrate how this works?\nFinding Waldo - a case of feature attention - it’s hard because it’s a case of conjunction search - wherein you have to search for a fusion of multiple features alongside each other. It’s a hard problem.\nQues - do models do this?\nFeature search is thought to be a parallel process; however conjunction search is thought to be a serial process. This make the latter harder.\nIdea: the chicken experiment - invalid and valid cues. (Can this be a new form of data augemntation mechanism for training attention mechanisms?)\nRead: - Even chickens can attend"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "ML Algorithms Core Member (2023 - Current)\nDeveloping multimodal models for battlefield triage, using NVIDIA Jetson Orin."
+  },
+  {
+    "objectID": "projects.html#darpa-triage-challenge",
+    "href": "projects.html#darpa-triage-challenge",
+    "title": "Projects",
+    "section": "",
+    "text": "ML Algorithms Core Member (2023 - Current)\nDeveloping multimodal models for battlefield triage, using NVIDIA Jetson Orin."
+  },
+  {
+    "objectID": "projects.html#context-aware-imitation-learning",
+    "href": "projects.html#context-aware-imitation-learning",
+    "title": "Projects",
+    "section": "Context Aware Imitation Learning",
+    "text": "Context Aware Imitation Learning\nResearcher (2024 - Current)\nImproving success rates in long-horizon imitation learning with language-conditioned diffusion models."
+  },
+  {
+    "objectID": "projects.html#machine-unlearning",
+    "href": "projects.html#machine-unlearning",
+    "title": "Projects",
+    "section": "Machine Unlearning",
+    "text": "Machine Unlearning\nResearcher (2023 - Current)\nDeveloped a novel approach integrating importance-weighted distilled images for secure data removal."
+  },
+  {
+    "objectID": "darpa.html",
+    "href": "darpa.html",
+    "title": "DARPA Triage Challenge",
+    "section": "",
+    "text": "ML Algorithms Core Member, CMU Robotics Institute\n\n\nWe developed multimodal deep learning models for stand-off vital sensing and hemorrhage detection in battlefield scenarios.\n\n\n\n\nBuilt CNN + Transformer hybrid models for heart and respiratory rate estimation.\nDeployed on NVIDIA Jetson Orin for real-time inference.\nField-tested on diverse robotic platforms for DARPA Challenge Year 1.\nManuscript awarded Best Thesis Award.\n\n\n\n\n\nDeployment on Jetson Orin\nRobotic Platform Field Test\n\n\n🔙 Back to Projects"
+  },
+  {
+    "objectID": "darpa.html#overview",
+    "href": "darpa.html#overview",
+    "title": "DARPA Triage Challenge",
+    "section": "",
+    "text": "We developed multimodal deep learning models for stand-off vital sensing and hemorrhage detection in battlefield scenarios."
+  },
+  {
+    "objectID": "darpa.html#research-contributions",
+    "href": "darpa.html#research-contributions",
+    "title": "DARPA Triage Challenge",
+    "section": "",
+    "text": "Built CNN + Transformer hybrid models for heart and respiratory rate estimation.\nDeployed on NVIDIA Jetson Orin for real-time inference.\nField-tested on diverse robotic platforms for DARPA Challenge Year 1.\nManuscript awarded Best Thesis Award."
+  },
+  {
+    "objectID": "darpa.html#video-demonstrations",
+    "href": "darpa.html#video-demonstrations",
+    "title": "DARPA Triage Challenge",
+    "section": "",
+    "text": "Deployment on Jetson Orin\nRobotic Platform Field Test\n\n\n🔙 Back to Projects"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBlood Mask EDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheory of Mind for Robotics - A Discussion of SOTA, Neural Bases, and Challenges\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLessons from Deploying ML Models on NVIDIA Orin & Jetson\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAttention - contrasting the neural perspective with the mathematical\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText prompt-based Image Masking using Stable Diffusion: A series of experiments\n\n\n\n\n\n\nCode\n\n\nAI\n\n\nStableDiffusion\n\n\nfast.ai\n\n\n\n\n\n\n\n\n\nOct 31, 2022\n\n\nJames Emilian\n\n\n\n\n\n\nNo matching items"
   }
 ]
