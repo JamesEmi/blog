@@ -1,0 +1,24 @@
+---
+title: "DARPA Triage Challenge"
+page-layout: full
+title-block-banner: true
+---
+
+# 🩸 DARPA Triage Challenge
+*ML Algorithms Core Member, CMU Robotics Institute*
+
+## Overview
+We developed **multimodal deep learning models** for **stand-off vital sensing and hemorrhage detection** in battlefield scenarios.
+
+## 🔬 Research Contributions
+- **Built CNN + Transformer hybrid models** for heart and respiratory rate estimation.
+- **Deployed on NVIDIA Jetson Orin** for real-time inference.
+- **Field-tested on diverse robotic platforms** for DARPA Challenge Year 1.
+- **Manuscript awarded Best Thesis Award.**
+
+## 🎥 Video Demonstrations
+- [Deployment on Jetson Orin](https://www.youtube.com/your_video_link)
+- [Robotic Platform Field Test](https://www.youtube.com/your_video_link)
+
+---
+[🔙 Back to Projects](projects.qmd)

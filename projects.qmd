@@ -1,0 +1,23 @@
+---
+title: "Projects"
+page-layout: full
+title-block-banner: true
+---
+
+# 🔬 Featured Projects
+
+## [DARPA Triage Challenge](darpa.qmd)
+*ML Algorithms Core Member (2023 - Current)*  
+Developing multimodal models for battlefield triage, using NVIDIA Jetson Orin.
+
+# 🔬 Other Projects
+
+## Context Aware Imitation Learning
+*Researcher (2024 - Current)*  
+Improving success rates in long-horizon imitation learning with language-conditioned diffusion models.
+
+## Machine Unlearning
+*Researcher (2023 - Current)*  
+Developed a novel approach integrating **importance-weighted distilled images** for secure data removal.
+
+<!-- [See More →](research.qmd) -->
