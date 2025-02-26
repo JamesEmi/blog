@@ -156,14 +156,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#featured-projects" id="toc-featured-projects" class="nav-link active" data-scroll-target="#featured-projects">🔬 Featured Projects</a>
+  <li><a href="#featured-project" id="toc-featured-project" class="nav-link active" data-scroll-target="#featured-project">🚀 Featured Project</a>
   <ul class="collapse">
-  <li><a href="#darpa-triage-challenge" id="toc-darpa-triage-challenge" class="nav-link" data-scroll-target="#darpa-triage-challenge">DARPA Triage Challenge</a></li>
+  <li><a href="#darpa-triage-challenge---core-member-team-chiron" id="toc-darpa-triage-challenge---core-member-team-chiron" class="nav-link" data-scroll-target="#darpa-triage-challenge---core-member-team-chiron">DARPA Triage Challenge - Core Member, Team Chiron</a></li>
+  <li><a href="#key-contributions" id="toc-key-contributions" class="nav-link" data-scroll-target="#key-contributions">🔬 Key Contributions</a>
+  <ul class="collapse">
+  <li><a href="#ocular-alertness-detection" id="toc-ocular-alertness-detection" class="nav-link" data-scroll-target="#ocular-alertness-detection">🏥 Ocular Alertness Detection</a></li>
+  <li><a href="#heart-rate-hr-detection" id="toc-heart-rate-hr-detection" class="nav-link" data-scroll-target="#heart-rate-hr-detection">❤️ Heart Rate (HR) Detection</a></li>
+  <li><a href="#hemorrhage-detection" id="toc-hemorrhage-detection" class="nav-link" data-scroll-target="#hemorrhage-detection">🩸 Hemorrhage Detection</a></li>
   </ul></li>
-  <li><a href="#other-projects" id="toc-other-projects" class="nav-link" data-scroll-target="#other-projects">🔬 Other Projects</a>
+  </ul></li>
+  <li><a href="#other-projects" id="toc-other-projects" class="nav-link" data-scroll-target="#other-projects">📌 Other Projects</a>
   <ul class="collapse">
-  <li><a href="#context-aware-imitation-learning" id="toc-context-aware-imitation-learning" class="nav-link" data-scroll-target="#context-aware-imitation-learning">Context Aware Imitation Learning</a></li>
-  <li><a href="#machine-unlearning" id="toc-machine-unlearning" class="nav-link" data-scroll-target="#machine-unlearning">Machine Unlearning</a></li>
+  <li><a href="#seizure-classification-from-eeg-signals" id="toc-seizure-classification-from-eeg-signals" class="nav-link" data-scroll-target="#seizure-classification-from-eeg-signals">🧠 Seizure Classification from EEG Signals</a></li>
+  <li><a href="#pleural-effusion-diagnosis" id="toc-pleural-effusion-diagnosis" class="nav-link" data-scroll-target="#pleural-effusion-diagnosis">🫁 Pleural Effusion Diagnosis</a></li>
+  <li><a href="#uncertainty-aware-segmentation" id="toc-uncertainty-aware-segmentation" class="nav-link" data-scroll-target="#uncertainty-aware-segmentation">🎭 Uncertainty-Aware Segmentation</a></li>
+  </ul></li>
+  <li><a href="#resources-links" id="toc-resources-links" class="nav-link" data-scroll-target="#resources-links">📎 Resources &amp; Links</a>
+  <ul class="collapse">
+  <li><a href="#get-in-touch" id="toc-get-in-touch" class="nav-link" data-scroll-target="#get-in-touch">📩 Get in Touch</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -175,26 +186,91 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="featured-projects" class="level1">
-<h1>🔬 Featured Projects</h1>
-<section id="darpa-triage-challenge" class="level2">
-<h2 class="anchored" data-anchor-id="darpa-triage-challenge"><a href="./darpa.html">DARPA Triage Challenge</a></h2>
-<p><em>ML Algorithms Core Member (2023 - Current)</em><br>
-Developing multimodal models for battlefield triage, using NVIDIA Jetson Orin.</p>
+<section id="featured-project" class="level1">
+<h1>🚀 Featured Project</h1>
+<section id="darpa-triage-challenge---core-member-team-chiron" class="level2">
+<h2 class="anchored" data-anchor-id="darpa-triage-challenge---core-member-team-chiron">DARPA Triage Challenge - Core Member, Team Chiron</h2>
+<p><strong>Development and Deployment of Remote Health Sensing Models</strong></p>
+<blockquote class="blockquote">
+<p><em>“When we have a significant emergency where there could be danger to the responders, you can save lives by not sending in a human right away. This autonomous triage system allows us to provide rapid help to as many victims as possible without needing extra human power — an essential gap to fill when medics are limited.”</em><br>
+— <strong>Dr.&nbsp;Lenny Weiss</strong>, Professor of Emergency Medicine, UPitt; Medical Director of City of Pittsburgh Police-SWAT</p>
+</blockquote>
+<p><img src="images/projects/robot_fleet.png" class="img-fluid" alt="The Team Chiron Year #1 robotic fleet - a SPOT, 2 RC cars and a Lockheed Indago 4 drone."> <!-- <img src="images/hemorrhage_segmentation.png" width="600px" style="border-radius: 10px;"> --></p>
+<hr>
+</section>
+<section id="key-contributions" class="level2">
+<h2 class="anchored" data-anchor-id="key-contributions">🔬 Key Contributions</h2>
+<section id="ocular-alertness-detection" class="level3">
+<h3 class="anchored" data-anchor-id="ocular-alertness-detection">🏥 Ocular Alertness Detection</h3>
+<ul>
+<li>Developed an <strong>ARKit-based system</strong> to assess <strong>ocular alertness</strong> via <strong>blink rate tracking</strong>. <img src="images/projects/ARKit.png" class="img-fluid" alt="A rough version of the software that formed the basis of the ocular alertness characterisation pipeline"></li>
+</ul>
+</section>
+<section id="heart-rate-hr-detection" class="level3">
+<h3 class="anchored" data-anchor-id="heart-rate-hr-detection">❤️ Heart Rate (HR) Detection</h3>
+<ul>
+<li>Led testing across <strong>classical spectral-reflectance models</strong> and <strong>transformer-based architectures</strong>.</li>
+<li><strong>Final model deployed</strong>: a <strong>3D CNN-based system</strong>, benchmarked extensively on <strong>custom IRB-approved datasets</strong>.</li>
+</ul>
+<p>📹 <strong>Demo</strong><br>
+<video src="videos/heartrate_detection_demo.mp4" class="img-fluid" controls=""><a href="videos/heartrate_detection_demo.mp4">A demo of the HR detection pipeline</a></video></p>
+</section>
+<section id="hemorrhage-detection" class="level3">
+<h3 class="anchored" data-anchor-id="hemorrhage-detection">🩸 Hemorrhage Detection</h3>
+<ul>
+<li>Conducted extensive benchmarking of <strong>segmentation models</strong> and <strong>Vision-Language Models (VLMs)</strong>.</li>
+<li><strong>Final deployment</strong>: A <strong>segmentation model</strong> detecting severe hemorrhage presence <strong>in real-time robotic data streams</strong>.</li>
+</ul>
+<p>📹 <strong>Live Robotic Data Demo</strong><br>
+<!-- *(Insert short video here.)* --> <video src="videos/mt003_run3_hidden.mp4" class="img-fluid" controls=""><a href="videos/mt003_run3_hidden.mp4">A live demo of the hemorrhage detection pipeline</a></video></p>
+<blockquote class="blockquote">
+<p>This research opened a new problem space—<strong>achieving grounding in small models for data-scarce tasks</strong>.<br>
+As we tackle the much harder challenge of performing hemorrhage detection in further degraded sensing environments for Year #2 Challenge (daytime operations in thick smoke, nightime operations with no visible illumination, etc.) we are continuing to investigate - (i) how do we achieve strong visual grounding in unstructured environments despite the scarcity of relevant data? and (ii) how do we use multimodal data streams - like multispectral imaging - to characterize hemorrhage presence even in absence of RGB illumination?</p>
+</blockquote>
+<hr>
+</section>
 </section>
 </section>
 <section id="other-projects" class="level1">
-<h1>🔬 Other Projects</h1>
-<section id="context-aware-imitation-learning" class="level2">
-<h2 class="anchored" data-anchor-id="context-aware-imitation-learning">Context Aware Imitation Learning</h2>
-<p><em>Researcher (2024 - Current)</em><br>
-Improving success rates in long-horizon imitation learning with language-conditioned diffusion models.</p>
+<h1>📌 Other Projects</h1>
+<section id="seizure-classification-from-eeg-signals" class="level2">
+<h2 class="anchored" data-anchor-id="seizure-classification-from-eeg-signals">🧠 Seizure Classification from EEG Signals</h2>
+<ul>
+<li>Developed a <strong>novel framework</strong> for capturing <strong>inter-annotator variability (aleatoric uncertainty)</strong> in <strong>seizure detection</strong> classification using <strong>EEG data</strong>.</li>
+</ul>
+<p>📄 <a href="https://proceedings.mlr.press/v259/azhar25b.html">Read the Publication</a></p>
 </section>
-<section id="machine-unlearning" class="level2">
-<h2 class="anchored" data-anchor-id="machine-unlearning">Machine Unlearning</h2>
-<p><em>Researcher (2023 - Current)</em><br>
-Developed a novel approach integrating <strong>importance-weighted distilled images</strong> for secure data removal.</p>
-<!-- [See More →](research.qmd) -->
+<section id="pleural-effusion-diagnosis" class="level2">
+<h2 class="anchored" data-anchor-id="pleural-effusion-diagnosis">🫁 Pleural Effusion Diagnosis</h2>
+<ul>
+<li>Built a <strong>segmentation model</strong> for <strong>pleural entity detection</strong>, aiding <strong>LSUHSC radiologists in diagnosis</strong>.</li>
+</ul>
+<!-- 📹 **Demo Video**  
+*(Insert video here.)* -->
+</section>
+<section id="uncertainty-aware-segmentation" class="level2">
+<h2 class="anchored" data-anchor-id="uncertainty-aware-segmentation">🎭 Uncertainty-Aware Segmentation</h2>
+<ul>
+<li>Developed a framework for <strong>uncertainty-aware segmentation</strong>, in collaboration with a friend and a fellow researcher, <a href="https://scholar.google.com/citations?user=5uDXUvIAAAAJ&amp;hl=en&amp;oi=ao">Nishanth TA</a>. <!-- - **Visualizing model uncertainty** to enhance interpretability and trustworthiness. --></li>
+<li>Research manuscript in progress. <!-- 
+🖼️ **Example Images**  
+*(Insert images here.)* --></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="resources-links" class="level1">
+<h1>📎 Resources &amp; Links</h1>
+<!-- - 📜 **[Full Research Archive](research.qmd)**   -->
+<ul>
+<li>✍️ <strong><a href="./blog.html">Blog</a></strong><br>
+</li>
+<li>🛠 <strong><a href="https://github.com/JamesEmi">GitHub Repositories</a></strong></li>
+</ul>
+<hr>
+<section id="get-in-touch" class="level2">
+<h2 class="anchored" data-anchor-id="get-in-touch">📩 Get in Touch</h2>
+<p>If you’re interested in working together or just want to chat science || books || music - feel free to reach out via <strong><a href="https://www.linkedin.com/in/james-emilian/">LinkedIn</a></strong>, <strong><a href="https://x.com/JamesEmilian2">Twitter</a></strong> or <strong><a href="mailto:juvanjos@andrew.cmu.edu">Email</a></strong>.</p>
 
 
 </section>

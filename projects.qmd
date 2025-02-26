@@ -4,20 +4,75 @@ page-layout: full
 title-block-banner: true
 ---
 
-# 🔬 Featured Projects
+# 🚀 Featured Project
 
-## [DARPA Triage Challenge](darpa.qmd)
-*ML Algorithms Core Member (2023 - Current)*  
-Developing multimodal models for battlefield triage, using NVIDIA Jetson Orin.
+## DARPA Triage Challenge - Core Member, Team Chiron
+**Development and Deployment of Remote Health Sensing Models**
 
-# 🔬 Other Projects
+> *“When we have a significant emergency where there could be danger to the responders, you can save lives by not sending in a human right away. This autonomous triage system allows us to provide rapid help to as many victims as possible without needing extra human power — an essential gap to fill when medics are limited.”*  
+> — **Dr. Lenny Weiss**, Professor of Emergency Medicine, UPitt; Medical Director of City of Pittsburgh Police-SWAT
 
-## Context Aware Imitation Learning
-*Researcher (2024 - Current)*  
-Improving success rates in long-horizon imitation learning with language-conditioned diffusion models.
+![The Team Chiron Year #1 robotic fleet - a SPOT, 2 RC cars and a Lockheed Indago 4 drone.](images/projects/robot_fleet.png)
+<!-- <img src="images/hemorrhage_segmentation.png" width="600px" style="border-radius: 10px;"> -->
 
-## Machine Unlearning
-*Researcher (2023 - Current)*  
-Developed a novel approach integrating **importance-weighted distilled images** for secure data removal.
+---
 
-<!-- [See More →](research.qmd) -->
+## 🔬 Key Contributions
+
+### 🏥 Ocular Alertness Detection
+- Developed an **ARKit-based system** to assess **ocular alertness** via **blink rate tracking**.
+![A rough version of the software that formed the basis of the ocular alertness characterisation pipeline](images/projects/ARKit.png)
+
+### ❤️ Heart Rate (HR) Detection
+- Led testing across **classical spectral-reflectance models** and **transformer-based architectures**.
+- **Final model deployed**: a **3D CNN-based system**, benchmarked extensively on **custom IRB-approved datasets**.
+
+
+📹 **Demo**  
+![A demo of the HR detection pipeline](videos/heartrate_detection_demo.mp4)
+
+### 🩸 Hemorrhage Detection
+- Conducted extensive benchmarking of **segmentation models** and **Vision-Language Models (VLMs)**.
+- **Final deployment**: A **segmentation model** detecting severe hemorrhage presence **in real-time robotic data streams**.
+
+📹 **Live Robotic Data Demo**  
+<!-- *(Insert short video here.)* -->
+![A live demo of the hemorrhage detection pipeline](videos/mt003_run3_hidden.mp4)
+
+> This research opened a new problem space—**achieving grounding in small models for data-scarce tasks**.  
+> As we tackle the much harder challenge of performing hemorrhage detection in further degraded sensing environments for Year #2 Challenge (daytime operations in thick smoke, nightime operations with no visible illumination, etc.) we are continuing to investigate - (i) how do we achieve strong visual grounding in unstructured environments despite the scarcity of relevant data? and (ii) how do we use multimodal data streams - like multispectral imaging - to characterize hemorrhage presence even in absence of RGB illumination?
+
+---
+
+# 📌 Other Projects
+
+## 🧠 Seizure Classification from EEG Signals
+- Developed a **novel framework** for capturing **inter-annotator variability (aleatoric uncertainty)** in **seizure detection** classification using **EEG data**.
+
+📄 [Read the Publication](https://proceedings.mlr.press/v259/azhar25b.html)
+
+## 🫁 Pleural Effusion Diagnosis  
+- Built a **segmentation model** for **pleural entity detection**, aiding **LSUHSC radiologists in diagnosis**.
+  
+<!-- 📹 **Demo Video**  
+*(Insert video here.)* -->
+
+## 🎭 Uncertainty-Aware Segmentation
+- Developed a framework for **uncertainty-aware segmentation**, in collaboration with a friend and a fellow researcher, [Nishanth TA](https://scholar.google.com/citations?user=5uDXUvIAAAAJ&hl=en&oi=ao).
+<!-- - **Visualizing model uncertainty** to enhance interpretability and trustworthiness. -->
+- Research manuscript in progress.
+<!-- 
+🖼️ **Example Images**  
+*(Insert images here.)* -->
+
+---
+
+# 📎 Resources & Links  
+<!-- - 📜 **[Full Research Archive](research.qmd)**   -->
+- ✍️ **[Blog](blog.qmd)**  
+- 🛠 **[GitHub Repositories](https://github.com/JamesEmi)**
+
+---
+
+## 📩 Get in Touch  
+If you're interested in working together or just want to chat science || books || music - feel free to reach out via **[LinkedIn](https://www.linkedin.com/in/james-emilian/)**, **[Twitter](https://x.com/JamesEmilian2)** or **[Email](mailto:juvanjos@andrew.cmu.edu)**.

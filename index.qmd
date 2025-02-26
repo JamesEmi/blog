@@ -21,16 +21,14 @@ title-block-banner: true
 :::{.g-col-7}
 <!-- # James Emilian -->
 
-I am a researcher and engineer with expertise in **Machine Learning**, **Robotics**, and **AI for Healthcare**. My work spans across academia and industry, with a focus on deploying intelligent systems for real-world impact.
+I am a computer vision researcher and biomedical engineer with expertise in **developing multimodal models** and finetuning **foundation models** for on-edge deployment on **robots**, and in **clinical settings**. I am currently a core ML team member at the **DARPA Triage Challenge**, developing **multimodal deep learning models** for battlefield trauma detection. The bulk of my work at CMU has centered around this role - rapid testing and deployment of algorithms for physiological sign sensing using robots. Given our aggressive deployment-first approach, I have more cool videos to show than NeurIPS publications - [see them here](projects.qmd). 
 
-I am currently a core ML team member at the **DARPA Triage Challenge**, developing **multimodal deep learning models** for battlefield trauma detection.
+Aside from my work on multimodal algorithms for medical triage robotics, I have worked on the below topics:  
+- **Machine Unlearning** for privacy-preserving AI  
+- **Imitation Learning** for long-horizon task planning in embodied AI simulations  
+- **Uncertainty-aware segmentation models for tumor and pleural effusion segmentation** 
 
-I've worked on diverse research areas, including:
-- **Machine Unlearning** for privacy-preserving AI
-- **Imitation Learning** for long-horizon robotics
-- **AI-powered ultrasound diagnostics** for medical applications
-
-📌 **Check out my [Projects](projects.qmd) and [Research](research.qmd).**  
+📌 **Check out my [Projects](projects.qmd)!!**  
 ✍️ **For my thoughts on AI & research, visit the [Blog](blog.qmd).**
 :::
 :::{.g-col-5}
