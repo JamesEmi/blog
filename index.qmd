@@ -32,7 +32,7 @@ Aside from my work on multimodal algorithms for medical triage robotics, I have 
 ✍️ **For my thoughts on AI & research, visit the [Blog](blog.qmd).**
 :::
 :::{.g-col-5}
-![James Emilian](images/JamesEmi_Pic.jpg){width=100%}
+![James Emilian](images/personal/climbing_j.png){width=100%}
 :::
 :::
 

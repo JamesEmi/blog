@@ -10,7 +10,7 @@ title-block-banner: true
 **Development and Deployment of Remote Health Sensing Models**
 
 > *“When we have a significant emergency where there could be danger to the responders, you can save lives by not sending in a human right away. This autonomous triage system allows us to provide rapid help to as many victims as possible without needing extra human power — an essential gap to fill when medics are limited.”*  
-> — **Dr. Lenny Weiss**, Professor of Emergency Medicine, UPitt; Medical Director of City of Pittsburgh Police-SWAT
+> — **[Dr. Lenny Weiss](https://www.emergencymedicine.pitt.edu/people/leonard-weiss)**, Professor of Emergency Medicine, UPitt; Medical Director of City of Pittsburgh Police-SWAT
 
 ![The Team Chiron Year #1 robotic fleet - a SPOT, 2 RC cars and a Lockheed Indago 4 drone.](images/projects/robot_fleet.png)
 <!-- <img src="images/hemorrhage_segmentation.png" width="600px" style="border-radius: 10px;"> -->
@@ -89,7 +89,7 @@ title-block-banner: true
 # 📎 Other Links  
 <!-- - 📜 **[Full Research Archive](research.qmd)**   -->
 - I (sometimes) write - **[here](blog.qmd)** and **[here](https://jamesemi.substack.com/)**  
-- And sometimes, push code, **[here](https://github.com/JamesEmi)**
+- And sometimes I push code **[here](https://github.com/JamesEmi)**
 <!-- - And sometimes, push code, here **[GitHub Repositories](https://github.com/JamesEmi)** -->
 
 ---

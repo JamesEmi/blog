@@ -1,6 +1,6 @@
 ---
 title: "Hi there!"
-image: images/JamesEmi_Pic.jpg
+image: images/personal/Schenley.png
 about:
   template: jolla
   # jolla
@@ -17,4 +17,4 @@ about:
 
 ---
 
-Playing around with code and words; in a constant state of figuring 🔮🎶
+In a constant state of figuring. I'm in my element when I have to make things work in high-stakes settings. Love writing as an exercise in thought and imagination. As for leisure - I love to make time for my friends, cook, talk outlandish philosphy, and go climbing or lifting.
