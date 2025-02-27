@@ -21,7 +21,7 @@ title-block-banner: true
 
 ### 🏥 Ocular Alertness Detection
 - Developed an **ARKit-based system** to assess **ocular alertness** via **blink rate tracking**.
-![A rough version of the software that formed the basis of the ocular alertness characterisation pipeline](images/projects/ARKit.png)
+![A rough version of the software that formed the basis of the ocular alertness characterisation pipeline](images/projects/ARKit.png){width=60% fig-align="right"}
 
 ### ❤️ Heart Rate (HR) Detection
 - Led testing across **classical spectral-reflectance models** and **transformer-based architectures**.
@@ -29,7 +29,11 @@ title-block-banner: true
 
 
 📹 **Demo**  
-![A demo of the HR detection pipeline](videos/heartrate_detection_demo.mp4)
+<!-- ![A demo of the HR detection pipeline](videos/heartrate_detection_demo.mp4) -->
+<!-- <iframe width="700" height="400" src="https://youtu.be/embed/wc0NH1rBK7Q" frameborder="0" allowfullscreen></iframe> -->
+{{< video "https://youtu.be/wc0NH1rBK7Q"
+    title='A live demo of the HR detection pipeline' 
+>}}
 
 ### 🩸 Hemorrhage Detection
 - Conducted extensive benchmarking of **segmentation models** and **Vision-Language Models (VLMs)**.
@@ -37,7 +41,12 @@ title-block-banner: true
 
 📹 **Live Robotic Data Demo**  
 <!-- *(Insert short video here.)* -->
-![A live demo of the hemorrhage detection pipeline](videos/mt003_run3_hidden.mp4)
+<!-- ![A live demo of the hemorrhage detection pipeline](videos/mt003_run3_hidden.mp4) -->
+<!-- <iframe width="700" height="400" src="https://youtu.be/embed/Pcj4oBDRlfE" frameborder="0" allowfullscreen></iframe> -->
+{{< video "https://youtu.be/Pcj4oBDRlfE"
+    title='A live demo of the hemorrhage detection pipeline' 
+>}}
+
 
 > This research opened a new problem space—**achieving grounding in small models for data-scarce tasks**.  
 > As we tackle the much harder challenge of performing hemorrhage detection in further degraded sensing environments for Year #2 Challenge (daytime operations in thick smoke, nightime operations with no visible illumination, etc.) we are continuing to investigate - (i) how do we achieve strong visual grounding in unstructured environments despite the scarcity of relevant data? and (ii) how do we use multimodal data streams - like multispectral imaging - to characterize hemorrhage presence even in absence of RGB illumination?
@@ -48,29 +57,40 @@ title-block-banner: true
 
 ## 🧠 Seizure Classification from EEG Signals
 - Developed a **novel framework** for capturing **inter-annotator variability (aleatoric uncertainty)** in **seizure detection** classification using **EEG data**.
-
+![Schematic of proposed architecture - a mixture if BiLSTM, GNN, WaveNet and ResNet.](images/projects/big-war/mods.png)
+<!-- can I write a blogpost on the ML sys design choices that went into picking this set for the final model?? -->
 📄 [Read the Publication](https://proceedings.mlr.press/v259/azhar25b.html)
+
 
 ## 🫁 Pleural Effusion Diagnosis  
 - Built a **segmentation model** for **pleural entity detection**, aiding **LSUHSC radiologists in diagnosis**.
   
-<!-- 📹 **Demo Video**  
-*(Insert video here.)* -->
+::: {.grid}
+:::{.g-col-6}
+{{< video "https://youtu.be/D9JoQDa8lfg" title='Accurate, low-latency segmentation of pleural line using finetuned FPN model' >}}
+:::
+:::{.g-col-6}
+{{< video "https://youtu.be/uhYX_pgEqdo" title='Original ultrasound data, with moving pleural line' >}}
+:::
+:::
+
 
 ## 🎭 Uncertainty-Aware Segmentation
 - Developed a framework for **uncertainty-aware segmentation**, in collaboration with a friend and a fellow researcher, [Nishanth TA](https://scholar.google.com/citations?user=5uDXUvIAAAAJ&hl=en&oi=ao).
 <!-- - **Visualizing model uncertainty** to enhance interpretability and trustworthiness. -->
 - Research manuscript in progress.
+![Given dataset with inherent inter-annotator disagreement, we obtain aleatoric uncertainty maps from the Bayesian UNet, analyze their relationship with inter-annotator variance, and present a new loss function that aligns these - leading to more unvertainty aware diagnoses](images/projects/discp_loss_unc/idea_schematic.png)
 <!-- 
 🖼️ **Example Images**  
 *(Insert images here.)* -->
 
 ---
 
-# 📎 Resources & Links  
+# 📎 Other Links  
 <!-- - 📜 **[Full Research Archive](research.qmd)**   -->
-- ✍️ **[Blog](blog.qmd)**  
-- 🛠 **[GitHub Repositories](https://github.com/JamesEmi)**
+- I (sometimes) write - **[here](blog.qmd)** and **[here](https://jamesemi.substack.com/)**  
+- And sometimes, push code, **[here](https://github.com/JamesEmi)**
+<!-- - And sometimes, push code, here **[GitHub Repositories](https://github.com/JamesEmi)** -->
 
 ---
 
