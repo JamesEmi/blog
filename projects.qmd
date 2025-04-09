@@ -43,7 +43,7 @@ title-block-banner: true
 <!-- *(Insert short video here.)* -->
 <!-- ![A live demo of the hemorrhage detection pipeline](videos/mt003_run3_hidden.mp4) -->
 <!-- <iframe width="700" height="400" src="https://youtu.be/embed/Pcj4oBDRlfE" frameborder="0" allowfullscreen></iframe> -->
-{{< video "https://youtu.be/Pcj4oBDRlfE"
+{{< video "https://youtu.be/Yq3hc72oEb4"
     title='A live demo of the hemorrhage detection pipeline' 
 >}}
 
@@ -61,7 +61,7 @@ title-block-banner: true
 <!-- can I write a blogpost on the ML sys design choices that went into picking this set for the final model?? -->
 📄 [Read the Publication](https://proceedings.mlr.press/v259/azhar25b.html)
 
-
+<!-- 
 ## 🫁 Pleural Effusion Diagnosis  
 - Built a **segmentation model** for **pleural entity detection**, aiding **LSUHSC radiologists in diagnosis**.
   
@@ -72,7 +72,7 @@ title-block-banner: true
 :::{.g-col-6}
 {{< video "https://youtu.be/uhYX_pgEqdo" title='Original ultrasound data, with moving pleural line' >}}
 :::
-:::
+::: -->
 
 
 ## 🎭 Uncertainty-Aware Segmentation
