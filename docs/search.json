@@ -4,14 +4,14 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nText prompt-based Image Masking using Stable Diffusion: A series of experiments\n\n\n\n\n\n\nCode\n\n\nAI\n\n\nStableDiffusion\n\n\nfast.ai\n\n\n\n\n\n\n\n\n\nOct 31, 2022\n\n\nJames Emilian\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nOn Grounding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText prompt-based Image Masking using Stable Diffusion: A series of experiments\n\n\n\n\n\n\nCode\n\n\nAI\n\n\nStableDiffusion\n\n\nfast.ai\n\n\n\n\n\n\n\n\n\nOct 31, 2022\n\n\nJames Emilian\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Hello :)",
     "section": "",
-    "text": "I am a computer vision researcher and biomedical engineer with expertise in developing multimodal models and finetuning foundation models for on-edge deployment on robots, and in clinical settings. I am currently a core ML team member at the DARPA Triage Challenge, developing multimodal deep learning models for battlefield trauma detection. The bulk of my work at CMU has centered around this role - rapid testing and deployment of algorithms for physiological sign sensing using robots. Given our aggressive deployment-first approach, I have more cool videos to show than NeurIPS publications - see them here.\nAside from my work on multimodal algorithms for medical triage robotics, I have worked on the below topics:\n- Machine Unlearning for privacy-preserving AI\n- Imitation Learning for long-horizon task planning in embodied AI simulations\n- Uncertainty-aware segmentation models for tumor and pleural effusion segmentation\n📌 Check out my Projects!!\n✍️ For my thoughts on AI & research, visit the Blog.\n\n\n\n\n\nJames Emilian"
+    "text": "I am a computer vision researcher and biomedical engineer with expertise in developing multimodal models and finetuning foundation models for on-edge deployment on robots, and in clinical settings. I am currently a core ML team member at the DARPA Triage Challenge, developing multimodal deep learning models for battlefield trauma detection. The bulk of my work at CMU has centered around this role - rapid testing and deployment of algorithms for physiological sign sensing using robots. Given our aggressive deployment-first approach, I have more cool videos to show than NeurIPS publications - see them here.\nAside from my work on multimodal algorithms for medical triage robotics, I have worked on the below topics:\n- Machine Unlearning for privacy-preserving AI\n- Imitation Learning for long-horizon task planning in embodied AI simulations\n- Uncertainty-aware segmentation models for tumor and pleural effusion segmentation\n📌 Check out my Projects!!\n✍️ For my thoughts on AI & research, visit the Blog.\n\n\n\n\n\nJ on the rocks."
   },
   {
     "objectID": "darpa.html",
@@ -40,6 +40,13 @@
     "title": "DARPA Triage Challenge",
     "section": "",
     "text": "Deployment on Jetson Orin\nRobotic Platform Field Test\n\n\n🔙 Back to Projects"
+  },
+  {
+    "objectID": "posts/g_dino_explained/index.html",
+    "href": "posts/g_dino_explained/index.html",
+    "title": "On Grounding",
+    "section": "",
+    "text": "Why this post? Well - as a computer vision researcher working in health sensing, I stumbled into the concept of grounding out of sheer necessity. Without revealing too much, I’ll just say that my grant required me to solve a tough medical problem where both false positives and false negatives were heavily penalized. The naive vision model I used had a tendency towards false positives, and I soon discovered that I could used visually grounded models to reduce the tendency for false positives by bringing in a granular ‘world knowledge’.\nwith all this hype around grounding; and as someone who merely chanced into it in the process of solving a pressing deployment problem, I feel compelled to understsnd this concept. It’s fascinating how, for example G-DINO is able to do this, and I want to understand this as deeply as I can."
   },
   {
     "objectID": "posts/DiffEditMask/index.html",
@@ -96,13 +103,6 @@
     "title": "Projects",
     "section": "🧠 Seizure Classification from EEG Signals",
     "text": "🧠 Seizure Classification from EEG Signals\n\nDeveloped a novel framework for capturing inter-annotator variability (aleatoric uncertainty) in seizure detection classification using EEG data.   📄 Read the Publication"
-  },
-  {
-    "objectID": "projects.html#pleural-effusion-diagnosis",
-    "href": "projects.html#pleural-effusion-diagnosis",
-    "title": "Projects",
-    "section": "🫁 Pleural Effusion Diagnosis",
-    "text": "🫁 Pleural Effusion Diagnosis\n\nBuilt a segmentation model for pleural entity detection, aiding LSUHSC radiologists in diagnosis."
   },
   {
     "objectID": "projects.html#uncertainty-aware-segmentation",
