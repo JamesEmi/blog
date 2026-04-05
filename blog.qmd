@@ -15,7 +15,13 @@ title-block-banner: true
 # Here, I write about **AI, Robotics, and Research Reflections**.
 
 listing:
-  contents: posts
+  contents:
+    - posts
+    - "!posts/g_dino_explained"
+    - "!posts/ResearchLanguage"
+    - "!posts/mcmc"
+    - "!posts/multi-timescale-rl"
+    - "!posts/visual-reasoning"
   sort: "date desc"
   type: default
   categories: true
