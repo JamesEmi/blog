@@ -3,7 +3,11 @@
     "listing": "/blog.html",
     "items": [
       "/posts/g_dino_explained/index.html",
-      "/posts/DiffEditMask/index.html"
+      "/posts/visual-reasoning/index_wip.html",
+      "/posts/multi-timescale-rl/sidequests.html",
+      "/posts/multi-timescale-rl/index.html",
+      "/posts/ResearchLanguage/index.html",
+      "/posts/mcmc/index.html"
     ]
   }
 ]
