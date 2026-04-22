@@ -4,7 +4,7 @@ page-layout: full
 title-block-banner: true
 ---
 
-# 🚀 Featured Project
+# Featured Project
 
 ## DARPA Triage Challenge - Core Member, Team Chiron
 **Development and Deployment of Remote Health Sensing Models**
