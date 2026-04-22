@@ -163,15 +163,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#darpa-triage-challenge---core-member-team-chiron" id="toc-darpa-triage-challenge---core-member-team-chiron" class="nav-link" data-scroll-target="#darpa-triage-challenge---core-member-team-chiron">DARPA Triage Challenge - Core Member, Team Chiron</a></li>
   <li><a href="#key-contributions" id="toc-key-contributions" class="nav-link" data-scroll-target="#key-contributions">🔬 Key Contributions</a>
   <ul class="collapse">
-  <li><a href="#ocular-alertness-detection" id="toc-ocular-alertness-detection" class="nav-link" data-scroll-target="#ocular-alertness-detection">🏥 Ocular Alertness Detection</a></li>
-  <li><a href="#heart-rate-hr-detection" id="toc-heart-rate-hr-detection" class="nav-link" data-scroll-target="#heart-rate-hr-detection">❤️ Heart Rate (HR) Detection</a></li>
-  <li><a href="#hemorrhage-detection" id="toc-hemorrhage-detection" class="nav-link" data-scroll-target="#hemorrhage-detection">🩸 Hemorrhage Detection</a></li>
+  <li><a href="#monocular-slam-for-people-detection-path-planning" id="toc-monocular-slam-for-people-detection-path-planning" class="nav-link" data-scroll-target="#monocular-slam-for-people-detection-path-planning">Monocular SLAM for people detection &amp; path planning</a></li>
+  <li><a href="#heart-rate-hr-detection" id="toc-heart-rate-hr-detection" class="nav-link" data-scroll-target="#heart-rate-hr-detection">Heart Rate (HR) Detection</a></li>
+  <li><a href="#hemorrhage-detection" id="toc-hemorrhage-detection" class="nav-link" data-scroll-target="#hemorrhage-detection">Hemorrhage Detection</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#other-projects" id="toc-other-projects" class="nav-link" data-scroll-target="#other-projects">📌 Other Projects</a>
+  <li><a href="#other-projects" id="toc-other-projects" class="nav-link" data-scroll-target="#other-projects">Other Projects</a>
   <ul class="collapse">
-  <li><a href="#seizure-classification-from-eeg-signals" id="toc-seizure-classification-from-eeg-signals" class="nav-link" data-scroll-target="#seizure-classification-from-eeg-signals">🧠 Seizure Classification from EEG Signals</a></li>
-  <li><a href="#uncertainty-aware-segmentation" id="toc-uncertainty-aware-segmentation" class="nav-link" data-scroll-target="#uncertainty-aware-segmentation">🎭 Uncertainty-Aware Segmentation</a></li>
+  <li><a href="#seizure-classification-from-eeg-signals" id="toc-seizure-classification-from-eeg-signals" class="nav-link" data-scroll-target="#seizure-classification-from-eeg-signals">Seizure Classification from EEG Signals</a></li>
+  <li><a href="#uncertainty-aware-segmentation" id="toc-uncertainty-aware-segmentation" class="nav-link" data-scroll-target="#uncertainty-aware-segmentation">Uncertainty-Aware Segmentation</a></li>
   </ul></li>
   <li><a href="#other-links" id="toc-other-links" class="nav-link" data-scroll-target="#other-links">📎 Other Links</a>
   <ul class="collapse">
@@ -201,14 +201,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="key-contributions" class="level2">
 <h2 class="anchored" data-anchor-id="key-contributions">🔬 Key Contributions</h2>
-<section id="ocular-alertness-detection" class="level3">
-<h3 class="anchored" data-anchor-id="ocular-alertness-detection">🏥 Ocular Alertness Detection</h3>
+<section id="monocular-slam-for-people-detection-path-planning" class="level3">
+<h3 class="anchored" data-anchor-id="monocular-slam-for-people-detection-path-planning">Monocular SLAM for people detection &amp; path planning</h3>
 <ul>
-<li>Developed an <strong>ARKit-based system</strong> to assess <strong>ocular alertness</strong> via <strong>blink rate tracking</strong>. <img src="images/projects/ARKit.png" class="img-fluid quarto-figure quarto-figure-right" style="width:60.0%" alt="A rough version of the software that formed the basis of the ocular alertness characterisation pipeline"></li>
+<li>Developed a <strong>custom PGO implementation</strong> using GT-SAM to allow GPS to optimize streaming inference using feedforward visual SLAM models such as MapAnything, imbuing the map with metric scale and clean trajectory alignment. <!-- ![A rough version of the software that formed the basis of the ocular alertness characterisation pipeline](images/projects/ARKit.png){width=60% fig-align="right"} --> <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bJJkKbZUV9c" title="GPS PGO for starling drone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div></li>
+<li>The same system also serves to create accurate maps and pose estimations from monocular data, which in turn form the backbone of the person ReID system. Details currently confidential :). <img src="images/projects/anyslam/starling_reid_demo.png" class="img-fluid quarto-figure quarto-figure-right" style="width:60.0%" alt="A demo of the mapping based ReID system"></li>
 </ul>
+<!-- ### Ocular Alertness Detection
+- Developed an **ARKit-based system** to assess **ocular alertness** via **blink rate tracking**.
+![A rough version of the software that formed the basis of the ocular alertness characterisation pipeline](images/projects/ARKit.png){width=60% fig-align="right"} -->
 </section>
 <section id="heart-rate-hr-detection" class="level3">
-<h3 class="anchored" data-anchor-id="heart-rate-hr-detection">❤️ Heart Rate (HR) Detection</h3>
+<h3 class="anchored" data-anchor-id="heart-rate-hr-detection">Heart Rate (HR) Detection</h3>
 <ul>
 <li>Led testing across <strong>classical spectral-reflectance models</strong> and <strong>transformer-based architectures</strong>.</li>
 <li><strong>Final model deployed</strong>: a <strong>3D CNN-based system</strong>, benchmarked extensively on <strong>custom IRB-approved datasets</strong>.</li>
@@ -217,12 +221,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- ![A demo of the HR detection pipeline](videos/heartrate_detection_demo.mp4) --> <!-- <iframe width="700" height="400" src="https://youtu.be/embed/wc0NH1rBK7Q" frameborder="0" allowfullscreen></iframe> --> </p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wc0NH1rBK7Q" title="A live demo of the HR detection pipeline" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
 </section>
 <section id="hemorrhage-detection" class="level3">
-<h3 class="anchored" data-anchor-id="hemorrhage-detection">🩸 Hemorrhage Detection</h3>
+<h3 class="anchored" data-anchor-id="hemorrhage-detection">Hemorrhage Detection</h3>
 <ul>
 <li>Conducted extensive benchmarking of <strong>segmentation models</strong> and <strong>Vision-Language Models (VLMs)</strong>.</li>
 <li><strong>Final deployment</strong>: A <strong>segmentation model</strong> detecting severe hemorrhage presence <strong>in real-time robotic data streams</strong>.</li>
 </ul>
-<p>📹 <strong>Live Robotic Data Demo</strong><br>
+<p><strong>Live Robotic Data Demo</strong><br>
 <!-- *(Insert short video here.)* --> <!-- ![A live demo of the hemorrhage detection pipeline](videos/mt003_run3_hidden.mp4) --> <!-- <iframe width="700" height="400" src="https://youtu.be/embed/Pcj4oBDRlfE" frameborder="0" allowfullscreen></iframe> --> </p><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Yq3hc72oEb4" title="A live demo of the hemorrhage detection pipeline" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
 <blockquote class="blockquote">
 <p>This research opened a new problem space—<strong>achieving grounding in small models for data-scarce tasks</strong>.<br>
@@ -233,14 +237,14 @@ As we tackle the much harder challenge of performing hemorrhage detection in fur
 </section>
 </section>
 <section id="other-projects" class="level1">
-<h1>📌 Other Projects</h1>
+<h1>Other Projects</h1>
 <section id="seizure-classification-from-eeg-signals" class="level2">
-<h2 class="anchored" data-anchor-id="seizure-classification-from-eeg-signals">🧠 Seizure Classification from EEG Signals</h2>
+<h2 class="anchored" data-anchor-id="seizure-classification-from-eeg-signals">Seizure Classification from EEG Signals</h2>
 <ul>
 <li>Developed a <strong>novel framework</strong> for capturing <strong>inter-annotator variability (aleatoric uncertainty)</strong> in <strong>seizure detection</strong> classification using <strong>EEG data</strong>. <img src="images/projects/big-war/mods.png" class="img-fluid" alt="Schematic of proposed architecture - a mixture if BiLSTM, GNN, WaveNet and ResNet."> <!-- can I write a blogpost on the ML sys design choices that went into picking this set for the final model?? --> 📄 <a href="https://proceedings.mlr.press/v259/azhar25b.html">Read the Publication</a></li>
 </ul>
 <!-- 
-## 🫁 Pleural Effusion Diagnosis  
+## Pleural Effusion Diagnosis  
 - Built a **segmentation model** for **pleural entity detection**, aiding **LSUHSC radiologists in diagnosis**.
   
 ::: {.grid}
@@ -275,7 +279,7 @@ As we tackle the much harder challenge of performing hemorrhage detection in fur
 ::: -->
 </section>
 <section id="uncertainty-aware-segmentation" class="level2">
-<h2 class="anchored" data-anchor-id="uncertainty-aware-segmentation">🎭 Uncertainty-Aware Segmentation</h2>
+<h2 class="anchored" data-anchor-id="uncertainty-aware-segmentation">Uncertainty-Aware Segmentation</h2>
 <ul>
 <li>Developed a framework for <strong>uncertainty-aware segmentation</strong>, in collaboration with a friend and a fellow researcher, <a href="https://scholar.google.com/citations?user=5uDXUvIAAAAJ&amp;hl=en&amp;oi=ao">Nishanth TA</a>. <!-- - **Visualizing model uncertainty** to enhance interpretability and trustworthiness. --></li>
 <li>Research manuscript in progress. <img src="images/projects/discp_loss_unc/idea_schematic.png" class="img-fluid" alt="Given dataset with inherent inter-annotator disagreement, we obtain aleatoric uncertainty maps from the Bayesian UNet, analyze their relationship with inter-annotator variance, and present a new loss function that aligns these - leading to more unvertainty aware diagnoses"> <!-- 

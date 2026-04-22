@@ -19,11 +19,22 @@ title-block-banner: true
 
 ## 🔬 Key Contributions
 
-### 🏥 Ocular Alertness Detection
-- Developed an **ARKit-based system** to assess **ocular alertness** via **blink rate tracking**.
-![A rough version of the software that formed the basis of the ocular alertness characterisation pipeline](images/projects/ARKit.png){width=60% fig-align="right"}
+### Monocular SLAM for people detection & path planning
+- Developed a **custom PGO implementation** using GT-SAM to allow GPS to optimize streaming inference using feedforward visual SLAM models such as MapAnything, imbuing the map with metric scale and clean trajectory alignment.
+<!-- ![A rough version of the software that formed the basis of the ocular alertness characterisation pipeline](images/projects/ARKit.png){width=60% fig-align="right"} -->
+{{< video "https://youtu.be/bJJkKbZUV9c"
+    title='GPS PGO for starling drone' 
+>}}
+- The same system also serves to create accurate maps and pose estimations from monocular data, which in turn form the backbone of the person ReID system. Details currently confidential :). 
+![A demo of the mapping based ReID system](images/projects/anyslam/starling_reid_demo.png){width=60% fig-align="right"}
 
-### ❤️ Heart Rate (HR) Detection
+
+
+<!-- ### Ocular Alertness Detection
+- Developed an **ARKit-based system** to assess **ocular alertness** via **blink rate tracking**.
+![A rough version of the software that formed the basis of the ocular alertness characterisation pipeline](images/projects/ARKit.png){width=60% fig-align="right"} -->
+
+### Heart Rate (HR) Detection
 - Led testing across **classical spectral-reflectance models** and **transformer-based architectures**.
 - **Final model deployed**: a **3D CNN-based system**, benchmarked extensively on **custom IRB-approved datasets**.
 
@@ -35,11 +46,11 @@ title-block-banner: true
     title='A live demo of the HR detection pipeline' 
 >}}
 
-### 🩸 Hemorrhage Detection
+### Hemorrhage Detection
 - Conducted extensive benchmarking of **segmentation models** and **Vision-Language Models (VLMs)**.
 - **Final deployment**: A **segmentation model** detecting severe hemorrhage presence **in real-time robotic data streams**.
 
-📹 **Live Robotic Data Demo**  
+**Live Robotic Data Demo**  
 <!-- *(Insert short video here.)* -->
 <!-- ![A live demo of the hemorrhage detection pipeline](videos/mt003_run3_hidden.mp4) -->
 <!-- <iframe width="700" height="400" src="https://youtu.be/embed/Pcj4oBDRlfE" frameborder="0" allowfullscreen></iframe> -->
@@ -53,16 +64,16 @@ title-block-banner: true
 
 ---
 
-# 📌 Other Projects
+# Other Projects
 
-## 🧠 Seizure Classification from EEG Signals
+## Seizure Classification from EEG Signals
 - Developed a **novel framework** for capturing **inter-annotator variability (aleatoric uncertainty)** in **seizure detection** classification using **EEG data**.
 ![Schematic of proposed architecture - a mixture if BiLSTM, GNN, WaveNet and ResNet.](images/projects/big-war/mods.png)
 <!-- can I write a blogpost on the ML sys design choices that went into picking this set for the final model?? -->
 📄 [Read the Publication](https://proceedings.mlr.press/v259/azhar25b.html)
 
 <!-- 
-## 🫁 Pleural Effusion Diagnosis  
+## Pleural Effusion Diagnosis  
 - Built a **segmentation model** for **pleural entity detection**, aiding **LSUHSC radiologists in diagnosis**.
   
 ::: {.grid}
@@ -75,7 +86,7 @@ title-block-banner: true
 ::: -->
 
 
-## 🎭 Uncertainty-Aware Segmentation
+## Uncertainty-Aware Segmentation
 - Developed a framework for **uncertainty-aware segmentation**, in collaboration with a friend and a fellow researcher, [Nishanth TA](https://scholar.google.com/citations?user=5uDXUvIAAAAJ&hl=en&oi=ao).
 <!-- - **Visualizing model uncertainty** to enhance interpretability and trustworthiness. -->
 - Research manuscript in progress.

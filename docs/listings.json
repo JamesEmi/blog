@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/3d_memory/index.html",
+      "/posts/classicalvsff_slam/index.html",
       "/posts/DiffEditMask/index.html"
     ]
   }
